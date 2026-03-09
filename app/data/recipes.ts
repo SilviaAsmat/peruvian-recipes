@@ -1,14 +1,28 @@
-{
-  "recipes": [
-    {
-      "remoteId": 1,
-      "name": "Lomo Saltado",
-      "time_to_cook": "30 min",
-      "time_to_prep": "15 min",
-      "total_time": "45 min",
-      "backdrop_url": "https://www.billyparisi.com/wp-content/uploads/2024/09/lomo-saltado-3.jpg",
-      "yield": "4",
-      "ingredients": [
+export interface Recipe {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  prepTime: number;
+  cookTime: number;
+  totalTime: number;
+  servings: number;
+  // difficulty: 'Easy' | 'Medium' | 'Hard';
+  // category: string;
+  ingredients: string[];
+  instructions: string[];
+}
+export const recipes: Recipe[] = [
+  {
+      id: 1,
+      title: "Lomo Saltado",
+      description: "Savoury sirloin steak with onions and tomatoes served with a side of fries and rice.",
+      cookTime: 30,
+      prepTime: 15,
+      totalTime: 45,
+      image: "https://www.billyparisi.com/wp-content/uploads/2024/09/lomo-saltado-3.jpg",
+      servings: 4,
+      ingredients: [
         "beef sirloin",
         "red onion",
         "tomato",
@@ -20,7 +34,7 @@
         "potatoes",
         "oil"
       ],
-      "steps": [
+      instructions: [
         "Cut potatoes into fries and fry until golden; set aside.",
         "Heat oil in a hot pan or wok and sear beef strips quickly; remove and set aside.",
         "Sauté garlic, onion, and aji amarillo until fragrant.",
@@ -28,16 +42,17 @@
         "Return beef to the pan and add soy sauce and red wine vinegar.",
         "Toss everything together, add fries, sprinkle with cilantro, and serve immediately."
       ]
-    },
+    }, 
     {
-      "remoteId": 2,
-      "name": "Aji de Gallina",
-      "time_to_cook": "30 min",
-      "time_to_prep": "15 min",
-      "total_time": "45 min",
-      "backdrop_url": "https://sabordelobueno.com/wp-content/uploads/2020/11/receta-aji-de-gallina-750x499.jpg",
-      "yield": "4",
-      "ingredients": [
+    id: 2,
+    title: "Aji de Gallina",
+    description: "A shredded chicken dish in a spicy cheese sauce",
+    image: "https://sabordelobueno.com/wp-content/uploads/2020/11/receta-aji-de-gallina-750x499.jpg",
+    prepTime: 15,
+    cookTime: 30,
+    totalTime: 45,
+    servings: 4,
+    ingredients: [
         "chicken breast",
         "aji amarillo paste",
         "evaporated milk",
@@ -50,7 +65,7 @@
         "salt",
         "pepper"
       ],
-      "steps": [
+    instructions: [
         "Boil chicken until cooked, shred it, and reserve the broth.",
         "Soak bread in milk and blend with walnuts to make a smooth paste.",
         "Sauté onion and garlic in oil until soft.",
@@ -60,14 +75,15 @@
       ]
     },
     {
-      "remoteId": 3,
-      "name": "Arroz Chaufa",
-      "time_to_cook": "30 min",
-      "time_to_prep": "15 min",
-      "total_time": "45 min",
-      "backdrop_url": "https://images.squarespace-cdn.com/content/v1/5ba56bae7eb88c0fa85de9af/1538762193533-4T584L9IIH5DK6XA6PVA/DSC_0645.jpg",
-      "yield": "4",
-      "ingredients": [
+    id: 3,
+    title: "Arroz Chaufa",
+    description: "A versatile fried rice dish that can be combined with any kind of protein",
+    image: "https://images.squarespace-cdn.com/content/v1/5ba56bae7eb88c0fa85de9af/1538762193533-4T584L9IIH5DK6XA6PVA/DSC_0645.jpg",
+    prepTime: 15,
+    cookTime: 30,
+    totalTime: 45,
+    servings: 4,
+    ingredients: [
         "cooked rice",
         "chicken or pork",
         "eggs",
@@ -78,7 +94,7 @@
         "oil",
         "sesame oil"
       ],
-      "steps": [
+    instructions: [
         "Heat oil in a wok and scramble eggs; remove and set aside.",
         "Stir-fry garlic and ginger until fragrant.",
         "Add meat and cook until done.",
@@ -86,16 +102,17 @@
         "Pour in soy sauce and a few drops of sesame oil.",
         "Return eggs to the wok, add green onions, toss well, and serve."
       ]
-    },
-    {
-      "remoteId": 4,
-      "name": "Tallarines Verdes",
-      "time_to_cook": "30 min",
-      "time_to_prep": "15 min",
-      "total_time": "45 min",
-      "backdrop_url": "https://art.whisk.com/image/upload/f_webp,h_560,w_560,c_fill,dpr_2/v1762372086454/recipe/d1c06e5e0e7ba3f9ad2e31066c8e5b15.png",
-      "yield": "4",
-      "ingredients": [
+  },
+  {
+  id: 4,
+  title: "Tallarines Verdes",
+  description: "Spaghetti in a basil forward pesto sauce",
+  image: "https://art.whisk.com/image/upload/f_webp,h_560,w_560,c_fill,dpr_2/v1762372086454/recipe/d1c06e5e0e7ba3f9ad2e31066c8e5b15.png",
+  prepTime: 15,
+  cookTime: 30,
+  totalTime: 45,
+  servings: 4,
+  ingredients: [
         "spaghetti",
         "basil",
         "spinach",
@@ -106,7 +123,7 @@
         "salt",
         "pepper"
       ],
-      "steps": [
+  instructions: [
         "Cook spaghetti in salted water until al dente.",
         "Blend basil, spinach, garlic, milk, and queso fresco into a smooth sauce.",
         "Heat olive oil in a pan and warm the green sauce gently.",
@@ -114,6 +131,5 @@
         "Add drained pasta to the sauce and toss until coated.",
         "Serve hot, optionally with grilled steak on the side."
       ]
-    }
-  ]
 }
+]
