@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-linear-to-r from-orange-500 to-red-500 text-white py-20">
+      <section className="bg-linear-to-r from-purple-600 to-red-500 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-4">Discover Amazing Recipes</h1>
+          <h1 className="text-5xl font-bold mb-4">Discover Peruvian Food</h1>
           <p className="text-xl opacity-90">
             From quick weeknight dinners to impressive desserts, find your next favorite dish
           </p>
