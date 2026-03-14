@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { recipes } from './data/recipes';
 import { RecipeCard } from './components/RecipeCard';
 

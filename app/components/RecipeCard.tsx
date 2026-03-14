@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import type { Recipe } from '../data/recipes';
 
@@ -8,7 +8,7 @@ interface RecipeCardProps {
 
 export function RecipeCard({ recipe }: RecipeCardProps) {
   return (
-    // <Link to={`/recipe/${recipe.id}`} className="group">
+    <Link href={`/recipe/${recipe.id}`} className="group">
       <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
         <div className="relative h-48 overflow-hidden">
           <img
@@ -34,6 +34,6 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
           </div>
         </div>
       </div>
-    // </Link>
+    </Link>
   );
 }
